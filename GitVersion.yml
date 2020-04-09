@@ -1,0 +1,46 @@
+mode: Mainline
+next-version: 0.2.0
+branches:
+  feature:
+    mode: ContinuousDeployment
+    regex: feature?[/-]
+    source-branches:
+      - master
+      - develop
+  release:
+    mode: ContinuousDeployment
+    regex: release?[/-]
+    source-branches:
+      - master
+      - develop
+  hotfix:
+    mode: ContinuousDeployment
+    regex: hotfix?[/-]
+    source-branches:
+      - master
+      - develop
+  fix:
+    mode: ContinuousDeployment
+    regex: fix?[/-]
+    source-branches:
+      - master
+      - develop
+  chore:
+    mode: ContinuousDeployment
+    regex: chore?[/-]
+    source-branches:
+      - master
+      - develop
+  develop:
+    mode: ContinuousDeployment
+    regex: develop
+    source-branches:
+      - master
+  dependabot:
+    mode: ContinuousDeployment
+    regex: dependabot?[/-]
+    source-branches:
+      - master
+      - develop
+ignore:
+  sha: []
